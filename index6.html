@@ -1,0 +1,1410 @@
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Site educativo sobre a história, origem, evolução e cultura do jogo de Truco.">
+
+<title>História do Truco - Da Origem à Tradição Brasileira</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background:
+            radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04) 0 2px, transparent 3px),
+            #10150f;
+        color: #eee;
+        line-height: 1.7;
+    }
+
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
+    header {
+        min-height: 560px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding: 70px 20px;
+        background:
+            linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.78)),
+            url("https://images.unsplash.com/photo-1518544801976-3e159e50e5bb?auto=format&fit=crop&w=1800&q=85")
+            center/cover;
+    }
+
+    header::before {
+        content: "♠";
+        position: absolute;
+        font-size: 420px;
+        color: rgba(255,255,255,0.025);
+        left: -80px;
+        top: -130px;
+        transform: rotate(-15deg);
+    }
+
+    header::after {
+        content: "♥";
+        position: absolute;
+        font-size: 420px;
+        color: rgba(220,20,40,0.04);
+        right: -80px;
+        bottom: -180px;
+        transform: rotate(15deg);
+    }
+
+    .hero {
+        position: relative;
+        z-index: 2;
+        max-width: 950px;
+    }
+
+    .hero .simbolo {
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(42px, 7vw, 82px);
+        color: #f7d774;
+        text-shadow: 0 4px 20px #000;
+        margin-bottom: 10px;
+    }
+
+    header h2 {
+        color: white;
+        font-size: clamp(22px, 4vw, 36px);
+        margin-bottom: 20px;
+    }
+
+    header p {
+        max-width: 760px;
+        margin: auto;
+        font-size: 19px;
+        color: #eee;
+    }
+
+    .botao-hero {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 30px;
+        background: #b51225;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .botao-hero:hover {
+        background: #e21d35;
+        transform: translateY(-3px);
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    nav {
+        background: #090b08;
+        padding: 14px 10px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 2px solid #80651b;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    nav a {
+        color: #eee;
+        text-decoration: none;
+        display: inline-block;
+        margin: 5px 12px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #f7d774;
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+       CONTEÚDO
+    ========================= */
+
+    section {
+        max-width: 1150px;
+        margin: auto;
+        padding: 75px 20px;
+    }
+
+    section h2 {
+        text-align: center;
+        color: #f7d774;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 5vw, 44px);
+        margin-bottom: 15px;
+    }
+
+    .subtitulo {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: #c9c9c9;
+        font-size: 17px;
+    }
+
+    /* =========================
+       INTRODUÇÃO
+    ========================= */
+
+    .introducao {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .introducao img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 4px solid #765b19;
+        box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+    }
+
+    .texto-intro {
+        background: #1b2119;
+        padding: 35px;
+        border-radius: 18px;
+        border-left: 5px solid #c9a52c;
+    }
+
+    .texto-intro h2 {
+        text-align: left;
+        font-size: 34px;
+    }
+
+    .texto-intro p {
+        margin-bottom: 15px;
+        color: #ddd;
+    }
+
+    .destaque {
+        color: #f7d774;
+        font-weight: bold;
+    }
+
+    /* =========================
+       CARTAS DECORATIVAS
+    ========================= */
+
+    .cartas {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin: 35px 0;
+    }
+
+    .carta {
+        width: 115px;
+        height: 165px;
+        background: #fff;
+        color: #111;
+        border-radius: 10px;
+        padding: 12px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+        transition: 0.3s;
+        position: relative;
+        transform: rotate(var(--rotacao));
+    }
+
+    .carta:hover {
+        transform: translateY(-15px) rotate(0deg);
+    }
+
+    .carta .numero {
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .carta .naipe {
+        font-size: 48px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .vermelha {
+        color: #c5142a;
+    }
+
+    /* =========================
+       LINHA DO TEMPO
+    ========================= */
+
+    .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 50px auto 0;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: #9e7b20;
+        border-radius: 10px;
+    }
+
+    .evento {
+        width: 50%;
+        padding: 15px 35px;
+        position: relative;
+    }
+
+    .evento:nth-child(odd) {
+        left: 0;
+        text-align: right;
+    }
+
+    .evento:nth-child(even) {
+        left: 50%;
+    }
+
+    .evento::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #d7b432;
+        border: 4px solid #171b15;
+        border-radius: 50%;
+        top: 28px;
+        z-index: 2;
+    }
+
+    .evento:nth-child(odd)::after {
+        right: -11px;
+    }
+
+    .evento:nth-child(even)::after {
+        left: -11px;
+    }
+
+    .evento-conteudo {
+        background: #1b2119;
+        padding: 24px;
+        border-radius: 14px;
+        box-shadow: 0 7px 20px rgba(0,0,0,0.25);
+    }
+
+    .evento h3 {
+        color: #f7d774;
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+
+    .evento p {
+        color: #ccc;
+    }
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .card {
+        background: #1a2018;
+        border-radius: 16px;
+        padding: 25px;
+        border: 1px solid #3d452f;
+        box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        border-color: #c7a52e;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 11px;
+        margin-bottom: 18px;
+    }
+
+    .card .icone {
+        font-size: 43px;
+        margin-bottom: 12px;
+    }
+
+    .card h3 {
+        color: #f7d774;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .card p {
+        color: #ccc;
+    }
+
+    /* =========================
+       BRASIL
+    ========================= */
+
+    .brasil {
+        background:
+            linear-gradient(rgba(7,45,26,0.93), rgba(4,32,19,0.97)),
+            url("https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1600&q=80")
+            center/cover;
+        max-width: none;
+    }
+
+    .brasil-conteudo {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .brasil h2 {
+        color: #ffe26c;
+    }
+
+    .brasil p {
+        max-width: 900px;
+        margin: 15px auto;
+        text-align: center;
+        font-size: 18px;
+        color: #eee;
+    }
+
+    /* =========================
+       VARIAÇÕES
+    ========================= */
+
+    .variacao {
+        background: #fff;
+        color: #222;
+        border-radius: 15px;
+        padding: 25px;
+        border-top: 6px solid #b51a2e;
+    }
+
+    .variacao h3 {
+        color: #8c1525;
+        font-family: Georgia, serif;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .variacao p {
+        color: #444;
+    }
+
+    /* =========================
+       REGRAS
+    ========================= */
+
+    .regras {
+        background: #eee5cc;
+        color: #222;
+        max-width: none;
+    }
+
+    .regras-conteudo {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .regras h2 {
+        color: #7b1423;
+    }
+
+    .regra-box {
+        background: white;
+        padding: 25px;
+        margin: 18px 0;
+        border-left: 6px solid #a7192e;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    }
+
+    .regra-box h3 {
+        color: #871628;
+        margin-bottom: 8px;
+    }
+
+    /* =========================
+       CURIOSIDADES
+    ========================= */
+
+    .curiosidade {
+        background: linear-gradient(135deg, #7f1222, #351018);
+        padding: 45px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+
+    .curiosidade h2 {
+        color: #fff;
+    }
+
+    .curiosidade p {
+        max-width: 850px;
+        margin: 15px auto;
+        font-size: 19px;
+    }
+
+    /* =========================
+       GALERIA
+    ========================= */
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .galeria img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 14px;
+        transition: 0.4s;
+        border: 2px solid #514516;
+    }
+
+    .galeria img:hover {
+        transform: scale(1.04);
+        filter: brightness(1.15);
+    }
+
+    /* =========================
+       FRASE FINAL
+    ========================= */
+
+    .frase-final {
+        text-align: center;
+        padding: 80px 20px;
+        background:
+            linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)),
+            url("https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1800&q=80")
+            center/cover;
+    }
+
+    .frase-final blockquote {
+        max-width: 850px;
+        margin: auto;
+        font-family: Georgia, serif;
+        font-size: clamp(25px, 4vw, 42px);
+        color: #f7d774;
+        font-style: italic;
+    }
+
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    footer {
+        background: #080a07;
+        color: #bbb;
+        text-align: center;
+        padding: 40px 20px;
+        border-top: 2px solid #594914;
+    }
+
+    footer strong {
+        color: #f7d774;
+    }
+
+    .voltar {
+        display: inline-block;
+        margin-top: 20px;
+        color: #f7d774;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* =========================
+       RESPONSIVIDADE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        .introducao {
+            grid-template-columns: 1fr;
+        }
+
+        .introducao img {
+            height: 300px;
+        }
+
+        .timeline::before {
+            left: 15px;
+        }
+
+        .evento,
+        .evento:nth-child(even),
+        .evento:nth-child(odd) {
+            width: 100%;
+            left: 0;
+            text-align: left;
+            padding-left: 50px;
+            padding-right: 5px;
+        }
+
+        .evento:nth-child(odd)::after,
+        .evento:nth-child(even)::after {
+            left: 4px;
+            right: auto;
+        }
+
+        .galeria {
+            grid-template-columns: 1fr;
+        }
+
+        nav a {
+            font-size: 13px;
+            margin: 4px 7px;
+        }
+    }
+
+    @media (max-width: 500px) {
+
+        header {
+            min-height: 500px;
+        }
+
+        header h1 {
+            font-size: 42px;
+        }
+
+        section {
+            padding: 55px 15px;
+        }
+
+        .texto-intro {
+            padding: 23px;
+        }
+
+        .curiosidade {
+            padding: 30px 20px;
+        }
+
+        .carta {
+            width: 90px;
+            height: 135px;
+        }
+
+        .carta .naipe {
+            font-size: 38px;
+        }
+    }
+
+</style>
+
+</head> <body id="topo">
+<!-- =========================
+     CABEÇALHO
+========================== -->
+
+<header>
+
+    <div class="hero">
+
+        <div class="simbolo">🃏</div>
+
+        <h1>TRUCO</h1>
+
+        <h2>Uma história de cartas, tradição e estratégia</h2>
+
+        <p>
+            Descubra as origens do jogo, sua chegada à América do Sul,
+            a evolução do truco no Brasil e a importância dessa tradição
+            na cultura popular.
+        </p>
+
+        <a href="#historia" class="botao-hero">
+            Conhecer a história
+        </a>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     MENU
+========================== -->
+
+<nav>
+
+    <a href="#inicio">Início</a>
+
+    <a href="#historia">História</a>
+
+    <a href="#linha-do-tempo">Linha do tempo</a>
+
+    <a href="#brasil">Brasil</a>
+
+    <a href="#variacoes">Variações</a>
+
+    <a href="#regras">Regras</a>
+
+    <a href="#curiosidades">Curiosidades</a>
+
+    <a href="#galeria">Galeria</a>
+
+</nav>
+
+<!-- =========================
+     INTRODUÇÃO
+========================== -->
+
+<section id="inicio">
+
+    <div class="introducao">
+
+        <img
+            src="https://images.unsplash.com/photo-1541278107931-e006523892df?auto=format&fit=crop&w=1000&q=85"
+            alt="Cartas de baralho sobre uma mesa"
+        >
+
+        <div class="texto-intro">
+
+            <h2>🃏 O que é o Truco?</h2>
+
+            <p>
+                O <span class="destaque">truco</span> é um jogo de cartas
+                tradicional que combina estratégia, memória, coragem e,
+                principalmente, a capacidade de blefar.
+            </p>
+
+            <p>
+                Ao longo do tempo, o jogo ganhou diferentes regras e
+                maneiras de jogar. Por isso, atualmente existem várias
+                modalidades de truco, especialmente na América do Sul.
+            </p>
+
+            <p>
+                No Brasil, o truco se tornou muito mais do que um jogo:
+                ele faz parte de encontros entre amigos, famílias,
+                festas, bares, clubes e campeonatos.
+            </p>
+
+            <p>
+                Mais do que simplesmente conhecer as cartas, jogar truco
+                significa entender o adversário e tomar decisões rápidas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CARTAS DECORATIVAS -->
+
+<div class="cartas">
+
+    <div class="carta" style="--rotacao:-8deg;">
+        <div class="numero vermelho">A</div>
+        <div class="naipe vermelho">♥</div>
+    </div>
+
+    <div class="carta" style="--rotacao:5deg;">
+        <div class="numero">7</div>
+        <div class="naipe">♣</div>
+    </div>
+
+    <div class="carta" style="--rotacao:-3deg;">
+        <div class="numero vermelho">Q</div>
+        <div class="naipe vermelho">♦</div>
+    </div>
+
+    <div class="carta" style="--rotacao:9deg;">
+        <div class="numero">K</div>
+        <div class="naipe">♠</div>
+    </div>
+
+</div>
+
+<!-- =========================
+     HISTÓRIA
+========================== -->
+
+<section id="historia">
+
+    <h2>📜 A História do Truco</h2>
+
+    <p class="subtitulo">
+        O truco possui uma história ligada à tradição dos jogos de cartas
+        europeus e passou por diferentes transformações até adquirir as
+        características que conhecemos hoje.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icone">🇪🇸</div>
+
+            <h3>Raízes Europeias</h3>
+
+            <p>
+                O truco é geralmente associado a jogos de cartas
+                tradicionais da Península Ibérica. Na Espanha, existem
+                modalidades históricas de jogos que utilizam blefe,
+                apostas e disputas entre jogadores.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">🚢</div>
+
+            <h3>Viagens e Transformações</h3>
+
+            <p>
+                Com as migrações e a circulação de pessoas entre Europa
+                e América, diferentes costumes e jogos de cartas
+                também atravessaram o oceano.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">🌎</div>
+
+            <h3>América do Sul</h3>
+
+            <p>
+                Na América do Sul, o jogo ganhou novas características
+                e diferentes regras, principalmente em países como
+                Argentina, Uruguai e Brasil.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">🇧🇷</div>
+
+            <h3>Tradição Brasileira</h3>
+
+            <p>
+                No Brasil, diferentes regiões desenvolveram suas próprias
+                maneiras de jogar, criando modalidades como o Truco
+                Paulista e o Truco Mineiro.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     LINHA DO TEMPO
+========================== -->
+
+<section id="linha-do-tempo">
+
+    <h2>⏳ Linha do Tempo</h2>
+
+    <p class="subtitulo">
+        Uma visão simplificada da trajetória histórica do truco.
+    </p>
+
+    <div class="timeline">
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🎴 Séculos passados</h3>
+
+                <p>
+                    Jogos de cartas se popularizam em diferentes regiões
+                    da Europa e passam a fazer parte do entretenimento
+                    cotidiano.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🇪🇸 Tradição Ibérica</h3>
+
+                <p>
+                    Jogos relacionados ao truco desenvolvem características
+                    próprias na Península Ibérica, incluindo desafios,
+                    apostas e blefes.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🚢 Expansão para a América</h3>
+
+                <p>
+                    A circulação de pessoas e culturas leva jogos de cartas
+                    para diferentes partes da América.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🌎 Séculos XIX e XX</h3>
+
+                <p>
+                    O truco se consolida em diferentes regiões da América
+                    do Sul e surgem variações com regras próprias.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🇧🇷 Truco no Brasil</h3>
+
+                <p>
+                    O jogo se espalha pelo território brasileiro e passa
+                    a fazer parte da cultura de diversas comunidades.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="evento">
+
+            <div class="evento-conteudo">
+
+                <h3>🏆 Hoje</h3>
+
+                <p>
+                    O truco continua sendo praticado em encontros
+                    familiares, bares, clubes, universidades e
+                    competições.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     TRUCO NO BRASIL
+========================== -->
+
+<section class="brasil" id="brasil">
+
+    <div class="brasil-conteudo">
+
+        <h2>🇧🇷 O Truco no Brasil</h2>
+
+        <p>
+            O Brasil possui uma das culturas de truco mais fortes da
+            América do Sul. O jogo se espalhou por diferentes estados
+            e ganhou regras regionais.
+        </p>
+
+        <p>
+            Em muitas comunidades, aprender a jogar truco é também uma
+            forma de convivência. Amigos e familiares se reúnem ao redor
+            de uma mesa para disputar partidas e conversar.
+        </p>
+
+        <p>
+            O famoso grito de <strong>“TRUCO!”</strong> faz parte da
+            identidade do jogo e representa o momento em que um jogador
+            desafia o adversário a aumentar o valor da disputa.
+        </p>
+
+        <p>
+            Apesar das diferenças entre as modalidades, elementos como
+            estratégia, blefe, leitura do adversário e trabalho em equipe
+            aparecem em muitas formas de jogar.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     VARIAÇÕES
+========================== -->
+
+<section id="variacoes">
+
+    <h2>🗺️ Variações do Truco</h2>
+
+    <p class="subtitulo">
+        Não existe apenas uma maneira de jogar truco. As regras mudam
+        de acordo com a região e a tradição de cada grupo.
+    </p>
+
+    <div class="cards">
+
+        <div class="variacao">
+
+            <h3>🟢 Truco Paulista</h3>
+
+            <p>
+                Muito conhecido no estado de São Paulo e em várias
+                outras regiões do país. É normalmente jogado em duplas
+                e utiliza o sistema de aumento da aposta por meio dos
+                desafios de truco.
+            </p>
+
+        </div>
+
+        <div class="variacao">
+
+            <h3>🔵 Truco Mineiro</h3>
+
+            <p>
+                Tradicional em Minas Gerais, possui diferenças na
+                organização das cartas e na maneira como as manilhas
+                são determinadas.
+            </p>
+
+        </div>
+
+        <div class="variacao">
+
+            <h3>🟡 Truco Gaúcho</h3>
+
+            <p>
+                No Sul do Brasil e especialmente no Rio Grande do Sul,
+                existem tradições próprias de truco, com regras e
+                costumes que podem variar entre grupos.
+            </p>
+
+        </div>
+
+        <div class="variacao">
+
+            <h3>🔴 Truco Argentino</h3>
+
+            <p>
+                Na Argentina, o truco possui forte tradição cultural e
+                regras próprias, incluindo diferentes formas de pontuação,
+                cantos e disputas.
+            </p>
+
+        </div>
+
+        <div class="variacao">
+
+            <h3>⚪ Truco Uruguaio</h3>
+
+            <p>
+                O Uruguai também possui sua própria tradição de truco,
+                mostrando como o jogo ganhou diferentes identidades na
+                América do Sul.
+            </p>
+
+        </div>
+
+        <div class="variacao">
+
+            <h3>🌎 Outras Modalidades</h3>
+
+            <p>
+                Como acontece com muitos jogos tradicionais, as regras
+                podem variar até mesmo entre cidades, clubes, famílias
+                e grupos de amigos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     REGRAS
+========================== -->
+
+<section class="regras" id="regras">
+
+    <div class="regras-conteudo">
+
+        <h2>🃏 Como Funciona uma Partida?</h2>
+
+        <p class="subtitulo">
+            As regras abaixo apresentam uma visão geral. A forma exata
+            de jogar pode mudar conforme a modalidade.
+        </p>
+
+        <div class="regra-box">
+
+            <h3>1️⃣ Formação dos jogadores</h3>
+
+            <p>
+                Uma modalidade bastante comum utiliza quatro jogadores,
+                formando duas duplas. Os parceiros normalmente ficam
+                posicionados alternadamente.
+            </p>
+
+        </div>
+
+        <div class="regra-box">
+
+            <h3>2️⃣ Distribuição das cartas</h3>
+
+            <p>
+                As cartas são embaralhadas e distribuídas aos jogadores.
+                A quantidade de cartas e o baralho utilizado dependem
+                da modalidade escolhida.
+            </p>
+
+        </div>
+
+        <div class="regra-box">
+
+            <h3>3️⃣ Disputa das rodadas</h3>
+
+            <p>
+                Os jogadores jogam suas cartas e tentam vencer as
+                disputas. A estratégia consiste em escolher o momento
+                certo para jogar cada carta.
+            </p>
+
+        </div>
+
+        <div class="regra-box">
+
+            <h3>4️⃣ O famoso “Truco!”</h3>
+
+            <p>
+                Durante a partida, um jogador pode pedir truco,
+                aumentando o valor da disputa. O adversário pode aceitar,
+                recusar ou aumentar novamente, dependendo das regras.
+            </p>
+
+        </div>
+
+        <div class="regra-box">
+
+            <h3>5️⃣ Manilhas</h3>
+
+            <p>
+                Em várias modalidades, algumas cartas possuem valor
+                superior às demais e são chamadas de manilhas. A forma
+                como elas são determinadas depende da modalidade.
+            </p>
+
+        </div>
+
+        <div class="regra-box">
+
+            <h3>6️⃣ Estratégia e blefe</h3>
+
+            <p>
+                Nem sempre o jogador com as melhores cartas vence.
+                Saber blefar, observar o adversário e escolher o momento
+                certo para desafiar são partes importantes da estratégia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     ESTRATÉGIA
+========================== -->
+
+<section>
+
+    <h2>🧠 A Estratégia por Trás do Truco</h2>
+
+    <p class="subtitulo">
+        O truco não depende apenas das cartas. O comportamento dos
+        jogadores também pode mudar completamente uma partida.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icone">👀</div>
+
+            <h3>Observar</h3>
+
+            <p>
+                Prestar atenção no comportamento do adversário pode
+                ajudar a identificar padrões durante a partida.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">🎭</div>
+
+            <h3>Blefar</h3>
+
+            <p>
+                Um jogador pode demonstrar confiança mesmo quando
+                possui cartas fracas, tentando fazer o adversário recuar.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">🤝</div>
+
+            <h3>Trabalhar em equipe</h3>
+
+            <p>
+                Em partidas de duplas, comunicação indireta, atenção
+                e estratégia coletiva podem fazer diferença.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icone">⏱️</div>
+
+            <h3>Escolher o momento</h3>
+
+            <p>
+                Saber quando aumentar a aposta ou quando recuar é uma
+                das decisões mais importantes durante o jogo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CURIOSIDADES
+========================== -->
+
+<section id="curiosidades">
+
+    <div class="curiosidade">
+
+        <h2>🤔 Curiosidades sobre o Truco</h2>
+
+        <p>
+            🃏 O truco possui diversas versões espalhadas pela América
+            do Sul.
+        </p>
+
+        <p>
+            🎭 O blefe é uma das características mais conhecidas do jogo.
+        </p>
+
+        <p>
+            🗣️ A expressão “Truco!” virou uma das marcas mais famosas
+            das partidas.
+        </p>
+
+        <p>
+            🇧🇷 No Brasil, diferentes estados desenvolveram maneiras
+            próprias de jogar.
+        </p>
+
+        <p>
+            🏆 Atualmente existem campeonatos e torneios de truco em
+            diferentes regiões.
+        </p>
+
+        <p>
+            👨‍👩‍👧‍👦 Para muitas pessoas, jogar truco é também uma forma
+            de reunir amigos e familiares.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     GALERIA
+========================== -->
+
+<section id="galeria">
+
+    <h2>📸 Galeria do Truco</h2>
+
+    <p class="subtitulo">
+        Imagens que representam cartas, mesas de jogo e o ambiente
+        tradicional associado aos jogos de cartas.
+    </p>
+
+    <div class="galeria">
+
+        <img
+            src="https://images.unsplash.com/photo-1541278107931-e006523892df?auto=format&fit=crop&w=900&q=80"
+            alt="Cartas de baralho"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1518893883800-45cd0954574b?auto=format&fit=crop&w=900&q=80"
+            alt="Jogo de cartas sobre uma mesa"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&w=900&q=80"
+            alt="Baralho e fichas sobre uma mesa"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1606503153255-59d8b8b9f5a3?auto=format&fit=crop&w=900&q=80"
+            alt="Cartas de baralho espalhadas"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&w=900&q=80"
+            alt="Mesa de jogo"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=900&q=80"
+            alt="Cartas em uma mesa"
+        >
+
+    </div>
+
+</section>
+
+<!-- =========================
+     IMPORTÂNCIA CULTURAL
+========================== -->
+
+<section>
+
+    <div class="texto-intro" style="max-width:1000px;margin:auto;">
+
+        <h2>❤️ Truco: jogo e cultura</h2>
+
+        <p>
+            O truco sobreviveu ao passar das gerações porque consegue
+            unir competição e diversão.
+        </p>
+
+        <p>
+            Uma partida pode reunir pessoas de idades diferentes e
+            criar momentos de conversa, brincadeira e convivência.
+        </p>
+
+        <p>
+            Cada região pode possuir seus próprios costumes, expressões
+            e regras. Essa diversidade é uma das características que
+            tornam o truco tão interessante.
+        </p>
+
+        <p>
+            Dessa maneira, estudar a história do truco também significa
+            conhecer um pouco da história dos costumes e das relações
+            sociais construídas ao redor dos jogos tradicionais.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FRASE FINAL
+========================== -->
+
+<section class="frase-final">
+
+    <blockquote>
+        “No truco, nem sempre a melhor carta é suficiente.
+        É preciso saber jogar a mão.”
+    </blockquote>
+
+</section>
+
+<!-- =========================
+     RODAPÉ
+========================== -->
+
+<footer>
+
+    <p>
+        🃏 <strong>História do Truco</strong>
+    </p>
+
+    <p>
+        Um projeto educativo sobre a origem, evolução e tradição
+        de um dos jogos de cartas mais populares do Brasil.
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 - Projeto Educacional
+    </p>
+
+    <a href="#topo" class="voltar">
+        ⬆ Voltar ao início
+    </a>
+
+</footer>
+
+</body> </html>
